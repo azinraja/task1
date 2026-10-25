@@ -1,0 +1,58 @@
+### api call for create user
+post  http://127.0.0.1:8000/user
+Content-Type: application/json
+
+{
+    "username":"shahil",
+    "email":"cp@gmail.com",
+    "password":"shahil123"
+}
+# __________________________________________________
+
+
+### api call for add exp
+post http://127.0.0.1:8000/exp
+Content-Type: application/json
+Authorization: Basic azin:azin123
+
+{
+    "title":"book",
+    "amount":"40",
+    "category":"bill",
+    "payment":"UPI"
+}
+
+### api call for list exp
+get http://127.0.0.1:8000/exp
+Authorization: Basic azin:azin123
+
+### api call for retrive exp
+get http://127.0.0.1:8000/rud/1
+Authorization: Basic azin:azin123
+
+### api call for update exp
+patch http://127.0.0.1:8000/rud/1
+Content-Type: application/json
+Authorization: Basic azin:azin123
+
+{
+  "payment":"card"
+}
+
+
+### api call for delete exp
+delete http://127.0.0.1:8000/rud/1
+Authorization: Basic shahil:shahil123
+
+
+### api call for title search
+get http://127.0.0.1:8000/exp?title=car
+Authorization: Basic azin:azin123
+
+### api call for category payment search
+get http://127.0.0.1:8000/exp?search=UPI
+Authorization: Basic azin:azin123
+
+### api call for ordering by amount,date
+get http://127.0.0.1:8000/exp?ordering=amount
+Authorization: Basic azin:azin123
